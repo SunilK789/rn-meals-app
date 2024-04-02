@@ -3,17 +3,27 @@ import React from "react";
 import { CATEGORIES } from "../../data/dummy-data";
 import CategoryGridTile from "../../components/CategoryGridTile";
 import Category from "../../models/category";
+import { SCREENS } from "../../contants/screenName";
 
-const renderedCategoryItem = (item: ListRenderItemInfo<Category>) => {
-  return (
-    <>
-      <CategoryGridTile title={item.item.title} color={item.item.color} />
-    </>
-  );
-};
+const CategoriesScreen = ({ navigation }) => {
+  //   console.log("CATEGORIES===>", CATEGORIES);
 
-const CategoriesScreen = () => {
-  console.log("CATEGORIES===>", CATEGORIES);
+  const renderedCategoryItem = (itemData: ListRenderItemInfo<Category>) => {
+    const onPressHandler = () => {
+      navigation.navigate(SCREENS.CATEGORY_OVERVIEW);
+    };
+
+    return (
+      <>
+        <CategoryGridTile
+          title={itemData.item.title}
+          color={itemData.item.color}
+          onPress={onPressHandler}
+        />
+      </>
+    );
+  };
+
   return (
     <FlatList
       data={CATEGORIES}

@@ -2,7 +2,7 @@ import { View, Text, Pressable } from "react-native";
 import React from "react";
 import { styles } from "./style";
 
-const CategoryGridTile = ({ title, color }) => {
+const CategoryGridTile = ({ title, color, onPress }) => {
   console.log("title===>", title);
   return (
     <View style={[styles.gridItem]}>
@@ -12,6 +12,7 @@ const CategoryGridTile = ({ title, color }) => {
           pressed ? styles.buttonPressed : null,
         ]}
         android_ripple={{ color: "#ccc" }}
+        onPress={onPress}
       >
         <View style={[styles.innerContainer, { backgroundColor: color }]}>
           <Text style={styles.title}>{title}</Text>
