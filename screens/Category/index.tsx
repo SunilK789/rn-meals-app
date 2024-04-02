@@ -13,12 +13,13 @@ const renderedCategoryItem = (item: ListRenderItemInfo<Category>) => {
 };
 
 const CategoriesScreen = () => {
-    console.log("CATEGORIES===>", CATEGORIES);
+  console.log("CATEGORIES===>", CATEGORIES);
   return (
     <FlatList
       data={CATEGORIES}
       keyExtractor={(item) => item.id}
       renderItem={(item) => renderedCategoryItem(item)}
+      numColumns={2}
     />
   );
 };
