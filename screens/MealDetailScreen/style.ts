@@ -1,6 +1,9 @@
 import { Platform, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  rootContainer: {
+    marginBottom: 16,
+  },
   image: {
     width: "100%",
     height: 200,
@@ -36,9 +39,9 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
   },
   listContainer: {
-    maxWidth: '80%'
+    maxWidth: "80%",
   },
   listOuterContainer: {
-   alignItems:'center'
-  }
+    alignItems: "center",
+  },
 });

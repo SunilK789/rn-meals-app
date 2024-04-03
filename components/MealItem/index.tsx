@@ -17,7 +17,6 @@ const MealItem: React.FC<IMealItemProps> = ({
   const navigation = useNavigation();
 
   const pressHandler = () => {
-    console.log("clicked===>");
     navigation.navigate(SCREENS.MEAL_DETAIL, {
       mealId: id,
     });
