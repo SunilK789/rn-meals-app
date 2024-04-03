@@ -10,7 +10,9 @@ const CategoriesScreen = ({ navigation }) => {
 
   const renderedCategoryItem = (itemData: ListRenderItemInfo<Category>) => {
     const onPressHandler = () => {
-      navigation.navigate(SCREENS.CATEGORY_OVERVIEW);
+      navigation.navigate(SCREENS.CATEGORY_OVERVIEW, {
+        categoryId: itemData.item.id,
+      });
     };
 
     return (

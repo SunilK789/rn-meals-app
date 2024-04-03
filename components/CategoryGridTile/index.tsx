@@ -3,7 +3,6 @@ import React from "react";
 import { styles } from "./style";
 
 const CategoryGridTile = ({ title, color, onPress }) => {
-  console.log("title===>", title);
   return (
     <View style={[styles.gridItem]}>
       <Pressable
