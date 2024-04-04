@@ -1,10 +1,10 @@
 import { View, Text, Image, Pressable } from "react-native";
 import React from "react";
 import { styles } from "./style";
-import { IMealItemProps } from "../../interfaces";
+import { IMealItemProps } from "../../../interfaces";
 import { useNavigation } from "@react-navigation/native";
-import { SCREENS } from "../../contants/screenName";
-import MealDetails from "../MealDetails";
+import { SCREENS } from "../../../contants/screenName";
+import MealDetails from "../../MealDetails";
 
 const MealItem: React.FC<IMealItemProps> = ({
   id,
