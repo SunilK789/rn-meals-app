@@ -9,6 +9,8 @@ import { SCREENS } from "./contants/screenName";
 import MealDetailScreen from "./screens/MealDetailScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import FavorateScreen from "./screens/Favorite";
+import { COLORS } from "./utils/Colors";
+import {Ionicons} from '@expo/vector-icons'
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -17,17 +19,34 @@ const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "#351401" },
+        headerStyle: { backgroundColor: COLORS.DARK_BROWN },
         headerTintColor: "white",
-        sceneContainerStyle: { backgroundColor: "#3f2f25" },
+        sceneContainerStyle: { backgroundColor: COLORS.LIGHT_BROWN },
+        drawerContentStyle: { backgroundColor: COLORS.DARK_BROWN },
+        drawerInactiveTintColor: "white",
+        drawerActiveTintColor: COLORS.LIGHTER_BROWN,
       }}
     >
-      <Drawer.Screen name="Category" component={CategoriesScreen} options={{
-        title:'All Categories'
-      }}/>
-      <Drawer.Screen name="FavoriteScreen" component={FavorateScreen} options={{
-        title: "Favorites"
-      }} />
+      <Drawer.Screen
+        name="Category"
+        component={CategoriesScreen}
+        options={{
+          title: "All Categories",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="list" color={color} size={size} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="FavoriteScreen"
+        component={FavorateScreen}
+        options={{
+          title: "Favorites",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="star" color={color} size={size} />
+          ),
+        }}
+      />
     </Drawer.Navigator>
   );
 };
@@ -39,9 +58,9 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerStyle: { backgroundColor: "#351401" },
+            headerStyle: { backgroundColor: COLORS.DARK_BROWN },
             headerTintColor: "white",
-            contentStyle: { backgroundColor: "#3f2f25" },
+            contentStyle: { backgroundColor: COLORS.DARK_BROWN },
           }}
         >
           <Stack.Screen

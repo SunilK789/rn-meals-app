@@ -1,4 +1,5 @@
 import { Platform, StyleSheet } from "react-native";
+import { COLORS } from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
   rootContainer: {
@@ -25,7 +26,7 @@ export const styles = StyleSheet.create({
     color: "white",
   },
   subTitle: {
-    color: "#e2b497",
+    color: COLORS.LIGHTEST_BROWN,
     fontSize: 18,
     fontWeight: "bold",
     margin: 4,
@@ -33,7 +34,7 @@ export const styles = StyleSheet.create({
     padding: 6,
   },
   subTitleContainer: {
-    borderBottomColor: "#e2b497",
+    borderBottomColor: COLORS.LIGHTEST_BROWN,
     borderBottomWidth: 2,
     marginHorizontal: 24,
     marginVertical: 10,

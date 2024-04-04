@@ -1,4 +1,5 @@
 import { Platform, StyleSheet } from "react-native";
+import { COLORS } from "../../../utils/Colors";
 
 export const styles = StyleSheet.create({
   listItem: {
@@ -7,10 +8,10 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
     marginVertical: 4,
     marginHorizontal: 12,
-    backgroundColor: "#e2b497",
+    backgroundColor: COLORS.LIGHTEST_BROWN,
   },
   itemText: {
-    color: "#351401",
+    color: COLORS.DARK_BROWN,
     textAlign: "center",
   },
 });

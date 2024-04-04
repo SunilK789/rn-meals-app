@@ -1,8 +1,9 @@
 import { Platform, StyleSheet } from "react-native";
+import { COLORS } from "../../../utils/Colors";
 
 export const styles = StyleSheet.create({
   subTitle: {
-    color: "#e2b497",
+    color: COLORS.LIGHTEST_BROWN,
     fontSize: 18,
     fontWeight: "bold",
     margin: 4,
@@ -10,7 +11,7 @@ export const styles = StyleSheet.create({
     padding: 6,
   },
   subTitleContainer: {
-    borderBottomColor: "#e2b497",
+    borderBottomColor: COLORS.LIGHTEST_BROWN,
     borderBottomWidth: 2,
     marginHorizontal: 12,
     marginVertical: 10,
