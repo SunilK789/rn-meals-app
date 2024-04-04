@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import MealsList from "../../components/MealsList";
 import { FavoritesContext } from "../../store/context/favorite/favorite-context";
 import { MEALS } from "../../data/dummy-data";
+import { styles } from "./style";
 
 const FavorateScreen = () => {
   const favoriteMealsContext = useContext(FavoritesContext);
@@ -10,6 +11,13 @@ const FavorateScreen = () => {
     favoriteMealsContext.ids.includes(meal.id)
   );
 
+  if (favoriteItems.length === 0) {
+    return (
+      <View style={styles.rootContent}>
+        <Text style={styles.text}>You have no favorite meals yet.</Text>
+      </View>
+    );
+  }
   return <MealsList items={favoriteItems} />;
 };
 
